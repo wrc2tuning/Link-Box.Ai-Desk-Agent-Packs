@@ -11,8 +11,8 @@
   },
   "model": {
     "file": "stylized-boy.glb",
-    "sha256": "998fd19207f922a770ea640a96673de5197834f4afa666168a83432d496726f1",
-    "bytes": 31682300,
+    "sha256": "99e89266cac99d46d524201e122d74b3780ddf21803450e6a721c90ba8690a86",
+    "bytes": 31701936,
     "facing_yaw": -0.32,
     "framing_fill": 0.975,
     "sole_bleed": 0.004,
