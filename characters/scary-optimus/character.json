@@ -11,8 +11,8 @@
   },
   "model": {
     "file": "scary-optimus.glb",
-    "sha256": "d25a68999ef4b0c22e754ab4672f646402d360767e267706cbbd30ad2405811d",
-    "bytes": 81574264,
+    "sha256": "3af39f567f37734ce8cdf5178688cbd3b488b76b7411ddcf16a641e3d3d0b375",
+    "bytes": 81596432,
     "facing_yaw": -0.32,
     "framing_fill": 0.975,
     "sole_bleed": 0.004,
