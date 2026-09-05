@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "kind": "character",
+  "id": "scary-optimus",
+  "name": "Scary Optimus",
+  "version": "1.0.0",
+  "license": {
+    "spdx": "LicenseRef-Owner",
+    "redistributable": true,
+    "source": "Tripo3D biped rig supplied by the repository owner (2026-09-05); preset:biped clips transplanted from the Optimus rig. Pre-release: licensing to be confirmed by the owner."
+  },
+  "model": {
+    "file": "scary-optimus.glb",
+    "sha256": "d25a68999ef4b0c22e754ab4672f646402d360767e267706cbbd30ad2405811d",
+    "bytes": 81574264,
+    "facing_yaw": -0.32,
+    "framing_fill": 0.975,
+    "sole_bleed": 0.004,
+    "height_units": 0.979
+  },
+  "window": {
+    "width": 180,
+    "height": 320
+  },
+  "clips": {
+    "prefix": "preset:biped:",
+    "loops": [
+      "standing_relax",
+      "idle",
+      "wait",
+      "look_around",
+      "scratch",
+      "fold_arms",
+      "agree",
+      "make_a_call_02",
+      "sit"
+    ],
+    "one_shots": [
+      "scared_01",
+      "bow",
+      "wave_goodbye_02",
+      "greet_02",
+      "greet_03",
+      "laugh_02",
+      "sob",
+      "jump",
+      "warm_up",
+      "turn",
+      "walk",
+      "run"
+    ],
+    "accents": [
+      "walk",
+      "run",
+      "sit"
+    ],
+    "accent_seconds": 1.0,
+    "accent_every": [
+      4,
+      7
+    ],
+    "pools": {
+      "rest": [
+        "standing_relax",
+        "idle",
+        "wait",
+        "fold_arms",
+        "standing_relax"
+      ],
+      "listen": [
+        "wait",
+        "idle",
+        "standing_relax",
+        "look_around",
+        "wait"
+      ],
+      "watching": [
+        "look_around",
+        "wait",
+        "look_around",
+        "idle"
+      ],
+      "think": [
+        "scratch",
+        "fold_arms",
+        "look_around",
+        "scratch"
+      ],
+      "speak": [
+        "agree",
+        "idle",
+        "agree",
+        "wait",
+        "agree"
+      ],
+      "work": [
+        "make_a_call_02",
+        "scratch",
+        "fold_arms",
+        "make_a_call_02"
+      ]
+    },
+    "idle_accents": [
+      "warm_up",
+      "turn",
+      "bow",
+      "look_around"
+    ],
+    "protected": [
+      "scared_01",
+      "bow",
+      "jump"
+    ],
+    "look_reduced_scale": 0.3,
+    "click": {
+      "head": [
+        "scared_01"
+      ],
+      "hand": [
+        "greet_02",
+        "wave_goodbye_02"
+      ],
+      "torso": [
+        "scratch"
+      ]
+    },
+    "state": {
+      "rest": "standing_relax",
+      "idle": "idle",
+      "listen": "wait",
+      "watching": "look_around",
+      "think": [
+        "scratch",
+        "fold_arms"
+      ],
+      "speak_loop": "agree",
+      "speak_high": [
+        "greet_02",
+        "greet_03"
+      ],
+      "work": "make_a_call_02",
+      "ack": [
+        "bow",
+        "wave_goodbye_02"
+      ],
+      "emotion": {
+        "laugh": "laugh_02",
+        "sad": "sob",
+        "scared": "scared_01"
+      }
+    }
+  },
+  "rig": {
+    "root": "Root",
+    "pelvis": "Pelvis",
+    "chest": [
+      "NeckTwist01",
+      "Spine02"
+    ],
+    "hips_locked": [
+      "Hip",
+      "Pelvis"
+    ],
+    "feet": [
+      "L_ToeBase",
+      "R_ToeBase",
+      "L_Foot",
+      "R_Foot"
+    ],
+    "thighs": [
+      "L_Thigh",
+      "R_Thigh"
+    ],
+    "arms": {
+      "L": {
+        "upper": "L_Upperarm",
+        "fore": "L_Forearm",
+        "hand": "L_Hand",
+        "outward": 1
+      },
+      "R": {
+        "upper": "R_Upperarm",
+        "fore": "R_Forearm",
+        "hand": "R_Hand",
+        "outward": -1
+      }
+    },
+    "look": {
+      "order": [
+        "Hip",
+        "Pelvis",
+        "Waist",
+        "Spine01",
+        "Spine02",
+        "NeckTwist01",
+        "NeckTwist02",
+        "Head"
+      ],
+      "weights": {
+        "Head": 1.0,
+        "NeckTwist02": 0.55,
+        "NeckTwist01": 0.3,
+        "Spine02": 0.12,
+        "Spine01": 0.0,
+        "Waist": 0.0,
+        "Pelvis": 0.0,
+        "Hip": 0.0
+      },
+      "yaw_only": [
+        "Pelvis",
+        "Hip"
+      ],
+      "head_clamp_deg": 50,
+      "base_yaw_deg": 20,
+      "base_pitch_deg": 12
+    },
+    "body_bone_regex": "head|neck|spine|waist|pelvis|hip|thigh|calf|foot|toe|hand|forearm|upperarm|clavicle",
+    "thigh_regex": "thigh|upleg|upperleg",
+    "zones": {
+      "head": [
+        "head",
+        "neck"
+      ],
+      "hand": [
+        "hand",
+        "forearm",
+        "arm"
+      ],
+      "default": "torso"
+    },
+    "scale": {
+      "hand_len": 0.134,
+      "torso_radius": 0.1237,
+      "hip_radius": 0.0948,
+      "hand_radius": 0.0227,
+      "hip_clamp": 0.0618,
+      "arm_gain": 2.5,
+      "arm_max": 0.4,
+      "edge_limit_x": 0.88,
+      "edge_limit_y": 0.93,
+      "body_margin": 0.06,
+      "head_margin": 0.14
+    }
+  },
+  "preview": "preview.png"
+}
