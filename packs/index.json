@@ -1,6 +1,35 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-05T00:00:00Z",
-  "release": null,
-  "packs": []
+  "generated": "2026-09-05T22:30:00Z",
+  "release": "packs-v0",
+  "packs": [
+    {
+      "id": "scary-optimus",
+      "kind": "character",
+      "name": "Scary Optimus",
+      "version": "1.0.0",
+      "url": "https://github.com/wrc2tuning/Link-Box.Ai-Desk-Agent-Packs/releases/download/packs-v0/character-scary-optimus-1.0.0.zip",
+      "sha256": "18d03cd10175f5fc5182e14f0a4c5e7596e41d2eb6806ec7ccba569a1d1a5115",
+      "bytes": 81652116,
+      "preview": "https://raw.githubusercontent.com/wrc2tuning/Link-Box.Ai-Desk-Agent-Packs/main/characters/scary-optimus/preview.png",
+      "license": "LicenseRef-Owner",
+      "requires": {
+        "overlay_schema": 1
+      }
+    },
+    {
+      "id": "stylized-boy",
+      "kind": "character",
+      "name": "Stylized Boy",
+      "version": "1.0.0",
+      "url": "https://github.com/wrc2tuning/Link-Box.Ai-Desk-Agent-Packs/releases/download/packs-v0/character-stylized-boy-1.0.0.zip",
+      "sha256": "d48301fb0a5d5c9ae68a0443796c6e355eb61c9687127f855f02ce36dd25de23",
+      "bytes": 31760134,
+      "preview": "https://raw.githubusercontent.com/wrc2tuning/Link-Box.Ai-Desk-Agent-Packs/main/characters/stylized-boy/preview.png",
+      "license": "LicenseRef-Owner",
+      "requires": {
+        "overlay_schema": 1
+      }
+    }
+  ]
 }
