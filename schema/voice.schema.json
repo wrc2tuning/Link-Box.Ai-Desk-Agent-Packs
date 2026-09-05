@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wrc2tuning/Link-Box.Ai-Desk-Agent-Packs/schema/voice.schema.json",
+  "title": "Master Harness voice pack manifest (voice.json)",
+  "type": "object",
+  "required": ["schema_version", "kind", "id", "name", "version", "license", "engine", "persona"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "kind": {"const": "voice"},
+    "id": {"type": "string", "pattern": "^[a-z0-9-]{2,32}$"},
+    "name": {"type": "string", "minLength": 1, "maxLength": 60},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "language": {"type": "string"},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "license": {"type": "object", "required": ["spdx", "redistributable"], "properties": {"spdx": {"type": "string"}, "redistributable": {"type": "boolean"}, "source": {"type": "string"}}},
+    "engine": {"type": "object", "required": ["name", "gpt", "sovits", "ref_wav", "ref_text"], "properties": {
+      "name": {"const": "gpt-sovits"}, "version": {"type": "string"},
+      "gpt": {"type": "string"}, "sovits": {"type": "string"},
+      "sha256": {"type": "object", "properties": {"gpt": {"type": ["string", "null"]}, "sovits": {"type": ["string", "null"]}}},
+      "bytes": {"type": "object", "properties": {"gpt": {"type": ["integer", "null"]}, "sovits": {"type": ["integer", "null"]}}},
+      "ref_wav": {"type": "string"}, "ref_text": {"type": "string", "minLength": 1}, "text_language": {"type": "string"},
+      "legacy_local_json": {"type": "boolean", "description": "built-in pack: engine paths come from ~/.local/share/master-harness/voices/mabel/local.json"}}},
+    "defaults": {"type": "object", "properties": {"rate": {"type": "number", "minimum": 0.5, "maximum": 2.0}}},
+    "persona": {"type": "object", "required": ["name", "system_prompt"], "properties": {
+      "name": {"type": "string"}, "tone": {"type": "string"},
+      "system_prompt": {"type": "string", "minLength": 20, "maxLength": 4000},
+      "modelfile_system": {"type": "string", "maxLength": 2000},
+      "style": {"type": "object", "properties": {"max_words": {"type": "integer"}, "max_sentences": {"type": "integer"}}},
+      "click_lines": {"type": "object", "properties": {"head": {"type": "string"}, "hand": {"type": "string"}, "torso": {"type": "string"}}}}},
+    "fillers": {"type": "object", "properties": {"manifest": {"type": "string"}, "dir": {"type": "string"}, "lock": {"type": "string"}, "builtin": {"type": "boolean"}}},
+    "talk_model": {"type": "object", "properties": {"gguf": {"type": "string"}, "modelfile": {"type": "string"}, "ollama_name": {"type": "string"}}},
+    "preview": {"type": "string"},
+    "trained": {"type": "object"}
+  }
+}
