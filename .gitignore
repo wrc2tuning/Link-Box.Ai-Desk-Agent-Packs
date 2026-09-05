@@ -1,0 +1,11 @@
+# Binaries are release assets, never git content (scripts/check-no-large-binaries.py enforces it).
+*.glb
+*.gltf
+*.fbx
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.zip
+dist/
+__pycache__/
