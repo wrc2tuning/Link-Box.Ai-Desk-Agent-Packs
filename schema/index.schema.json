@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wrc2tuning/Link-Box.Ai-Desk-Agent-Packs/schema/index.schema.json",
+  "title": "Master Harness pack index (packs/index.json)",
+  "type": "object",
+  "required": ["schema_version", "packs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "generated": {"type": "string"},
+    "release": {"type": "string"},
+    "packs": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "name", "version", "url", "sha256", "bytes"], "properties": {
+      "id": {"type": "string", "pattern": "^[a-z0-9-]{2,32}$"},
+      "kind": {"enum": ["character", "voice"]},
+      "name": {"type": "string"},
+      "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+      "url": {"type": "string", "pattern": "^https://"},
+      "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+      "bytes": {"type": "integer", "minimum": 1},
+      "preview": {"type": "string"},
+      "license": {"type": "string"},
+      "requires": {"type": "object"}}}}
+  }
+}
