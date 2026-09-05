@@ -40,6 +40,9 @@ reference clip with its transcript, the persona (system prompt, Modelfile
 system text, click lines) and the pre-rendered filler lines with a lock that
 ties every wav to its text and checkpoint.
 
+`packs-v0` ships characters only. The plan for the first public voice packs
+(and the harness work they need) is [docs/expand-voice-options.md](docs/expand-voice-options.md).
+
 ## Publishing a pack
 
 1. Build the zip with the harness: `master-harness voice packs build character <dir> --glb <glb>` or `... build voice <dir>`.
